@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Form({dates,createDate}) {
+function Form({dates}) {
   
-  createDate(document.getElementById('name'),Document.getElementById('date'),Document.getElementById('image'))
+  // createDate(document.getElementById('name'),Document.getElementById('date'),Document.getElementById('image'))
 
   return (
     

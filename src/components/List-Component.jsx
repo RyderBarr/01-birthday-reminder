@@ -7,7 +7,7 @@ const List = ({dates, removeDate}) =>
 
   return(
 
-    <div style={{display:"flex", backgroundColor:"antiquewhite", justifyContent:"space-evenly", flexDirection:"row", flexWrap:"wrap"}}>
+    <div style={{display:"flex", backgroundColor:"lightpink", justifyContent:"space-evenly", flexDirection:"row", flexWrap:"wrap"}}>
       {/* date is empty */}
       {/* {console.log(dates)} */}
       {dates.map((date)=>{
