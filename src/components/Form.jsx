@@ -1,34 +1,50 @@
-import React from 'react'
 
-function Form({dates}) {
+
+function Form({dates = [], setDates}) {
   
-  // createDate(document.getElementById('name'),Document.getElementById('date'),Document.getElementById('image'))
+  const handleSubmition = (e) => {
+
+    e.preventDefault()
+
+    const form = e.target
+    const info = new FormData(form)
+
+    const date = Object.fromEntries(info.entries())
+    console.log(dates)
+
+    setDates(dates.push(date))
+    console.log(dates.length, dates)
+
+  }
 
   return (
     
-    <div>
+    <form method='post' onSubmit={handleSubmition}>
 
-      <label htmlFor=""><p>name</p>
+      <input type="number" name="id" value={dates.length+1} style={{display:"none"}}/>
 
-        <input type="text" id='name' required />
-
-      </label>
-
-      <label htmlFor=""><p>date</p>
-
-        <input type="date" name="" id="date" required/>
+      <label>
+        
+        name: <input type="text" name="name" defaultValue="John Doe" required />
 
       </label>
 
-      <label htmlFor=""><p>image url</p>
+      <label htmlFor="">
+        
+        date:<input type="date" name="date" defaultValue={Date.now()} required/>
 
-          <input type="text" id='image' />
+      </label>
+
+      <label htmlFor="">
+        
+        image url:<input type="text" name="image"  />
         
       </label>
 
-      {}
+      <button type="submit"> add </button>
+      {/* <button> add </button> */}
 
-    </div>    
+    </form>    
 
     
 

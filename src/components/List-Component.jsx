@@ -2,7 +2,7 @@
 
 import SingleDate from './SingleDate'
 
-const List = ({dates, removeDate}) => 
+const List = ({dates = [], removeDate}) => 
 {
 
   return(

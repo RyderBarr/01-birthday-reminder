@@ -25,7 +25,7 @@ function Main() {
         
                 <div>
 
-                        <Form dates={dates}/>
+                        <Form dates={dates} setDates={() => setDates()}/>
 
                         {/* {console.log(dates)} */}
                         <List dates={dates} removeDate={removeDate}/>
