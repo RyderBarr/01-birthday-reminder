@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SingleDate = ({id,firstName, date, image, removeDate}) =>
+const SingleDate = ({id,firstName, date, image}) =>
 {
 
   let birthDay = new Date(date)
@@ -15,7 +15,7 @@ const SingleDate = ({id,firstName, date, image, removeDate}) =>
 
       <h3 style={{margin:"5px"}}>{firstName}'s birthday </h3>
       <h4>{date}</h4>
-      <button style={{margin:"5px"}} onClick={()=> removeDate(id)}>Remove</button>
+      {/* <button style={{margin:"5px"}} onClick={()=> removeDate(id)}>Remove</button> */}
       <div style={{margin:"5px"}}>
           <img src={image} alt="" />
       </div>
